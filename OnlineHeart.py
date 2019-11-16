@@ -9,8 +9,8 @@ import queue
 import random
 from statistics import Statistics
 from printer import Printer
+import arg
 
-#70-75
 had_gotted_guard = []
 
 def CurrentTime():
@@ -67,12 +67,12 @@ class OnlineHeart:
                     Printer().printer(f"获取房间 {OriginRoomId} 编号 {GuardId} 的上船亲密度: {json_response2['message']}",
                                       "Lottery", "cyan")
                     print(json_response2)
-                '''
                 else:
-                    Printer().printer(
+                    if arg.mode == 1:
+                        Printer().printer(
                         f"房间 {OriginRoomId} 编号 {GuardId}  的上船亲密度领取出错: {json_response2}",
                         "Error", "red")
-                '''
+
                 await asyncio.sleep(random.uniform(1,3))
 
     async def check_winner(self, i, g, start_time):

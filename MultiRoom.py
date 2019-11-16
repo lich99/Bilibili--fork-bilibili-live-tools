@@ -2,7 +2,7 @@ import random
 import asyncio
 from bilibili import bilibili
 from printer import Printer
-
+import arg
 
 async def get_area_list():
     response = await bilibili().req_area_list()
@@ -46,7 +46,8 @@ async def check_state(area, roomid=None):
         live_status = json_response['data']['live_status']
         curr_area_name = json_response['data']['parent_area_name']
         if live_status == 1 and curr_area_name in area:
-            Printer().printer(f'[{area}分区] 房间 {roomid} 直播状态正常', "Info", "green")
+            if arg.mode == 1:
+                Printer().printer(f'[{area}分区] 房间 {roomid} 直播状态正常', "Info", "green")
             return [roomid, area]
         elif live_status != 1:
             Printer().printer(f"[{area}分区] 房间 {roomid} 已未直播！将切换监听房间", "Info", "green")
