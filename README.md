@@ -36,8 +36,12 @@ From =
 To = 
 ```
 
-效果图：
-![](https://github.com/lich99/Bilibili-live-tools-clear/blob/master/img/img1.png)
+效用：
+|        | 辣条数量  |
+|  ----  | ----  |
+| 工作日  | ~150/H |
+| 周末  | ~200/H |
 
+*采用晚间21时左右数据
 
 
