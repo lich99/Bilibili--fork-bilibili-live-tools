@@ -1,0 +1,7 @@
+pip packages:
+
+requests
+rsa
+aiohttp
+termcolor
+colorama
