@@ -1,12 +1,12 @@
 # Modified from [bilibili-live-tools](https://github.com/Dawnnnnnn/bilibili-live-tools)
 ## Bilibili 直播助手
 
-精简了log显示
-使用随机等待时间
-增加定时关闭
-增加邮件发送结果
-修复奖励不领取bug
-修复SSL在python3.7+环境下的偶然性报错
+精简了log显示  
+使用随机等待时间  
+增加定时关闭  
+增加邮件发送结果  
+修复奖励不领取bug  
+修复SSL在python3.7+环境下的偶然性报错  
 
 更多功能详见原repo [Wiki](https://github.com/Dawnnnnnn/bilibili-live-tools/wiki)
 
