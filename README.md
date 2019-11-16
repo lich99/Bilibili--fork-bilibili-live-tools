@@ -1,14 +1,23 @@
-﻿# Modified from [bilibili-live-tools](https://github.com/Dawnnnnnn/bilibili-live-tools)
+# Modified from [bilibili-live-tools](https://github.com/Dawnnnnnn/bilibili-live-tools)
+## Bilibili 直播助手
 
 精简了log显示
 使用随机等待时间
 增加定时关闭
 增加邮件发送结果
 修复奖励不领取bug
-修复SSL在python3.7环境下的偶然性报错
+修复SSL在python3.7+环境下的偶然性报错
 
 更多功能详见原repo [Wiki](https://github.com/Dawnnnnnn/bilibili-live-tools/wiki)
 
+Requirement
+```
+pip install requests
+pip install rsa
+pip install aiohttp
+pip install termcolor
+pip install colorama
+```
 运行：
 windows环境下在cmd内键入
 ```
@@ -28,3 +37,7 @@ To =
 ```
 
 效果图：
+![](https://github.com/lich99/Bilibili-live-tools-clear/blob/master/img/img1.png)
+
+
+
