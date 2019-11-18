@@ -33,10 +33,9 @@ msgRoot.attach(msgAlternative)
 with open(r'./stat/daliy_total.txt','r') as f:
     amount = f.readline()
 
-mail_msg = '<p>'+ 'Got  ' + amount + '  lotteries' +'</p>' + '<p>' + datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S") + '</p>'
-msgAlternative.attach(MIMEText(mail_msg, 'html', 'utf-8'))
-
 def send():
+    mail_msg = '<p>'+ 'Got  ' + amount + '  lotteries' +'</p>' + '<p>' + datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S") + '</p>'
+    msgAlternative.attach(MIMEText(mail_msg, 'html', 'utf-8'))
     try:
         smtpObj = smtplib.SMTP() 
         smtpObj.connect(mail_host,25)    
