@@ -19,22 +19,6 @@ class Auto_Run():
         self.cmd = cmd
         self.ext = (cmd[-3:]).lower()
         self.p = None
-        self.run()
-
-        try:
-            while 1:
-                time.sleep(sleep_time * 20)
-                self.poll = self.p.poll()
-                if self.p.poll() is None:
-                    print("restarting......")
-                    self.p.kill()
-                    self.run()
-
-                else:
-                    print("starting......")
-                    self.run()
-        except KeyboardInterrupt:
-            print("exit???")
 
     def run(self):
         if self.ext == ".py":
@@ -54,13 +38,12 @@ class Auto_Run():
                 print('\n[{}] [Sys]     Running for {} mins --Got {} lotteries\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), str((i+1) * PERIOD), amount))
             
             with open(r'./stat/log_total.txt','a') as f:
-                    f.write('[{}] Got {} lotteries in total'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), amount))
-            
+                    f.write('[{}] Got {} lotteries in total\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), amount))
+            self.p.kill()
+            time.sleep(3)
             if arg.mail == 1:                    
                 send()
-            self.p.kill()
-            
-        else:
-            pass
+            return 1
 
-app = Auto_Run(TIME, CMD)
+
+app = Auto_Run(TIME, CMD).run()
