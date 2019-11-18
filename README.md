@@ -12,12 +12,9 @@
 
 Requirement
 ```
-pip install requests
-pip install rsa
-pip install aiohttp
-pip install termcolor
-pip install colorama
+pip install rsa, aiohttp, requests, colorama, termcolor
 ```
+
 运行：
 windows环境下在cmd内键入
 ```
@@ -35,9 +32,11 @@ mail_pass =
 From = 
 To = 
 ```
+
   日期 | 辣条数量 
  :----: | :----:  
  工作日:|  ~250/H 
  周末:  | ~300/H
 
 *采用晚间22时左右数据
+*日均~1500个
